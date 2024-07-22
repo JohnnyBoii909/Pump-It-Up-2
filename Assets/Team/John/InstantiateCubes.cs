@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InstantiateCubes : MonoBehaviour
 {
-    public GameObject sampleCubePrefab;
+    /*public GameObject sampleCubePrefab;
 
     private GameObject[] _sampleCube;
 
@@ -39,5 +39,5 @@ public class InstantiateCubes : MonoBehaviour
                 _sampleCube[i].transform.localScale = new Vector3(1,(AudioPeer.samples[i]*maxScale)*2, 1);
             }
         }
-    }
+    }*/
 }

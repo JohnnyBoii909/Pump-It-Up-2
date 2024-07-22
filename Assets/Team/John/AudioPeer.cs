@@ -2,18 +2,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(AudioSource))]
 public class AudioPeer : MonoBehaviour
 {
     public AudioSource _audioSource;
-    public static float[] samples = new float[512];
-    public static float[] _freqBand = new float[8];
+    public int numberOfSamples;
+    public int numberOfBands;
+    public float[] samples;
+    public float[] freqBand;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        if (_audioSource == null)
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
+        samples = new float[numberOfSamples];
+        freqBand = new float[numberOfBands];
     }
 
     // Update is called once per frame
@@ -33,6 +40,7 @@ public class AudioPeer : MonoBehaviour
         /*
          * 22050 / 512 = 43hertz per sample
          *
+         * 0-20hertz
          * 20-60hertz
          * 60-250hertz
          * 250-500hertz
@@ -50,19 +58,19 @@ public class AudioPeer : MonoBehaviour
          * 4 - 32 samples = 1378hertz, range = 1291-2666 hertz
          * 5 - 64 samples = 2752hertz, range = 2667-5418 hertz
          * 6 - 128 samples = 5504hertz, range = 5419-10922 hertz
-         * 7 - 256 samples - 11008hertz, range = 10923-21930 hertz
+         * 7 - 256 samples = 11008hertz, range = 10923-21930 hertz
          * 510 add 2 more and we will have our desired 512 channels
          */
         
         //This loops through and powers all the samples by 2 to set up
         int count = 0;
         
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < numberOfBands; i++)
         {
             float average = 0;
             int sampleCount = (int) Mathf.Pow(2, i) * 2;
 
-            if (i == 7)
+            if (i == numberOfBands-1)
             {
                 sampleCount += 2;
             }
@@ -75,8 +83,13 @@ public class AudioPeer : MonoBehaviour
 
             average /= count;
 
-            _freqBand[i] = average * 10;
+            freqBand[i] = average * 10;
         }
         
+    }
+    
+    public float[] GetFrequencyBands()
+    {
+        return freqBand;
     }
 }
