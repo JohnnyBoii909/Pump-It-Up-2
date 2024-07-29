@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpectrumDataConsumer : MonoBehaviour
-{
-    public AudioPeer audioPeer;
+{ 
+        public AudioPeer audioPeer;
         public Transform targetTransform;
         public int frequencyBandForScaling = 0;
         public int frequencyBandForRotation = 0;
-        public float scaleMultiplier = 10.0f;
-        public float rotationMultiplier = 10.0f;
+        public float scaleMultiplier;
+        public float rotationMultiplier;
+        public Rigidbody rb;
+        
 
         public float clock;
 
@@ -49,9 +51,15 @@ public class SpectrumDataConsumer : MonoBehaviour
                     {
                         ApplyTransformRotationBasedOnSpectrumData(frequencyBands[frequencyBandForRotation]);
                     }
+                    AddForceMoveForward();
                 }
 
                 yield return new WaitForSeconds(clock);
             }
+        }
+
+        void AddForceMoveForward()
+        {
+            rb.AddForce(new Vector3(0,0,-1),ForceMode.Acceleration);
         }
 }
