@@ -108,8 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPeer: {fileID: 0}
   targetTransform: {fileID: 5577354908750374917}
-  frequencyBandForScaling: 1
-  frequencyBandForRotation: 5
+  frequencyBandForScaling: 2
+  frequencyBandForRotation: 6
   scaleMultiplier: 10
   rotationMultiplier: 800
   rb: {fileID: 9057324890894419041}
