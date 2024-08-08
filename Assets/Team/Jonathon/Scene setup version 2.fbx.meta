@@ -3,7 +3,172 @@ guid: 2f8bbbe09a1e95b48bf06a8b1564682d
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blacks
+    second: {fileID: 2100000, guid: 12f9649c11f268f4cb264d10957504d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Button
+    second: {fileID: 2100000, guid: fbe0c071587e8c94497214f4e378ed64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair Metal
+    second: {fileID: 2100000, guid: 05dfc3bae4cc2aa438ca0cfde2626c78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair Metal.001
+    second: {fileID: 2100000, guid: 31c68ecab67e1c345a8bb657fe32f7d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair base
+    second: {fileID: 2100000, guid: d8270dfbf4146244d9a6646ed92828a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair cushion
+    second: {fileID: 2100000, guid: 1a1c098ebcacb3044bd8e3dbe9a69ca3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cloth
+    second: {fileID: 2100000, guid: 214907aaa5a866f468dd718a0af6a328, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Collider Frame
+    second: {fileID: 2100000, guid: 6e37e254dc102bc4db0a1b8cc1929c49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Collider Primary
+    second: {fileID: 2100000, guid: 73d7eaaf25c216a469f133d7f48fe745, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Collider Secondary
+    second: {fileID: 2100000, guid: 1fdb175a4ddcae448af4d3f6588d1ec3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Energy tubing
+    second: {fileID: 2100000, guid: d733dc9d7454e06428f6d3f0b518b90c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 2431782a9e8b0e242bde7495a8992054, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Headband
+    second: {fileID: 2100000, guid: 18559b0b201745f44af042e8b15c24a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Headphone
+    second: {fileID: 2100000, guid: ecf7aa665437a384f97f5d0c626f1d8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Joints
+    second: {fileID: 2100000, guid: c91d57f763bdd3b4e94f34a93a4cf584, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Macbook
+    second: {fileID: 2100000, guid: 37b3fa1d5988cfa4282d0c324689d7cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.001
+    second: {fileID: 2100000, guid: 669b306a0d6a70d48baf3233e6552e2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mix Table
+    second: {fileID: 2100000, guid: aa14483e004c9744a9443cc5c61b924a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nobs
+    second: {fileID: 2100000, guid: d6586a253f2818446a1e98ca96caf8f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: 78ba33844d9502b40b4d50c0449eca40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sliders
+    second: {fileID: 2100000, guid: 19566312a135f1541937e6118b553c33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Speaker Metal
+    second: {fileID: 2100000, guid: 07e91bc2790998349a37eb0137cd4336, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Speaker grill
+    second: {fileID: 2100000, guid: ae6790875c02e68488067c8feb820fa5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Speaker1 base
+    second: {fileID: 2100000, guid: afc0ecd26f0dca044b7fb70f78291ca5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Speaker1secondary
+    second: {fileID: 2100000, guid: 0f1af4d78e36fc44987afeaee6dc10a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stage base
+    second: {fileID: 2100000, guid: e04413262d3ce0843b1c993683ee7976, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SwitchTable
+    second: {fileID: 2100000, guid: 5b68a94121497c4439d2e6f1eb756d6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Table mat
+    second: {fileID: 2100000, guid: dc22352c98ed09340aa70c33f3e05035, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Table wood
+    second: {fileID: 2100000, guid: a95049bbe4d78614b8727a626cc5e69a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tub
+    second: {fileID: 2100000, guid: 05f91322c24059743bd42084f7da9c1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wires
+    second: {fileID: 2100000, guid: 53606b94a6150354da1867c109e812ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: server rack 1
+    second: {fileID: 2100000, guid: fc4887cb65f58c5478129b06e47027a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: server rack 2
+    second: {fileID: 2100000, guid: f54894510160f9d478c035c0f95f6f26, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
