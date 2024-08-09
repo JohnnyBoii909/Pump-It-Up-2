@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5577354908750374917}
   - component: {fileID: 5577354908750374916}
   - component: {fileID: 5577354908750374915}
-  - component: {fileID: 5577354908750374914}
   - component: {fileID: 5577354908750374913}
   - component: {fileID: 9057324890894419041}
   - component: {fileID: 1349985255111789146}
@@ -81,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5577354908750374914
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5577354908750374912}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5577354908750374913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,9 +96,10 @@ MonoBehaviour:
   targetTransform: {fileID: 5577354908750374917}
   frequencyBandForScaling: 2
   frequencyBandForRotation: 6
-  scaleMultiplier: 10
-  rotationMultiplier: 800
+  scaleMultiplier: 5
+  rotationMultiplier: 400
   rb: {fileID: 9057324890894419041}
+  enableForwardMovement: 1
   clock: 0.005
 --- !u!54 &9057324890894419041
 Rigidbody:
