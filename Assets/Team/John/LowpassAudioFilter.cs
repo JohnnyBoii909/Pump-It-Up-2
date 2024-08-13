@@ -29,7 +29,7 @@ public class LowpassAudioFilter : MonoBehaviour
             DisableHighPassFilter();
         }
 
-        if (Input.GetButtonDown(KeyCode.Joystick1Button1.ToString()))
+        if (Input.GetButtonDown(KeyCode.Joystick1Button1.ToString())) 
         { 
             ResetAllFilters();
         }

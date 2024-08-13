@@ -99,7 +99,8 @@ MonoBehaviour:
   scaleMultiplier: 5
   rotationMultiplier: 400
   rb: {fileID: 9057324890894419041}
-  enableForwardMovement: 1
+  enableIfNotSpinnerCube: 0
+  originalStartingSize: {x: 0, y: 0, z: 0}
   clock: 0.005
 --- !u!54 &9057324890894419041
 Rigidbody:
@@ -129,4 +130,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987939e82f4e57641855261d7bac867b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 10
+  lifetime: 5
