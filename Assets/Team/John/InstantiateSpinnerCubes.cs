@@ -22,7 +22,7 @@ public class InstantiateSpinnerCubes : MonoBehaviour
             GameObject newInstanceOfObjectToSpawn = Instantiate(objectToSpawn, transform.position, objectToSpawn.transform.rotation);
             SpinnerCubesActive.Add(newInstanceOfObjectToSpawn);
             
-            SpectrumDataConsumer consumer = newInstanceOfObjectToSpawn.GetComponent<SpectrumDataConsumer>();
+            SpectrumDataConsumer consumer = newInstanceOfObjectToSpawn.GetComponentInChildren<SpectrumDataConsumer>();
             if (consumer != null)
             {
                 consumer.audioPeer = audioPeer;
