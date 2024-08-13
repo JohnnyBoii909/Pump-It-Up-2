@@ -23,18 +23,15 @@ public class LowpassAudioFilter : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if (rightHand != null)
+        if (Input.GetButtonDown(KeyCode.Joystick1Button0.ToString()))
         {
-            if (rightHand.GetButtonDown(VRButton.Trigger))
-            {
-                ApplyLowPassFilter();
-                DisableHighPassFilter();
-            }
+            ApplyLowPassFilter();
+            DisableHighPassFilter();
+        }
 
-            if (rightHand.GetButtonDown(VRButton.Two))
-            {
-                ResetAllFilters();
-            }
+        if (Input.GetButtonDown(KeyCode.Joystick1Button1.ToString()))
+        { 
+            ResetAllFilters();
         }
     }
     

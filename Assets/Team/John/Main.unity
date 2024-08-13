@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93938f987857004bbb04e8b26b36f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 193657252602917647, guid: 4cf2266ffff1dd2438340d40d57a0f04,
+  objectToSpawn: {fileID: 86135789259295335, guid: 6eabb52b6a4876a47b62163d092b4b07,
     type: 3}
   SpinnerCubesActive: []
   spawnTimer: 3
@@ -917,7 +917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93938f987857004bbb04e8b26b36f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 4414748671849952349, guid: 95ebdf3983136fe4cb01e62fa6c9b132,
+  objectToSpawn: {fileID: 4121834122243220337, guid: 83b7141cd9f727e48b718fef1171b888,
     type: 3}
   SpinnerCubesActive: []
   spawnTimer: 3
@@ -2122,6 +2122,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR Controls Tutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 6931720710828119183, guid: 04f3798b214a9dc4f9b63d565df011b2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6931720710805485780, guid: 04f3798b214a9dc4f9b63d565df011b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2191,11 +2196,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.59831
-      objectReference: {fileID: 0}
-    - target: {fileID: 6931720710828119183, guid: 04f3798b214a9dc4f9b63d565df011b2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6931720709868701756, guid: 04f3798b214a9dc4f9b63d565df011b2,
         type: 3}
