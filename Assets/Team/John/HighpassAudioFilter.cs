@@ -7,48 +7,46 @@ using UnityEngine;
 
 public class HighpassAudioFilter : MonoBehaviour
 {
-    private IVRDevice device;
-    private IVRInputDevice leftHand;
     private GameObject audioSourceOrigin;
-    private HighpassAudioFilter highPassFilter;
-    private LowpassAudioFilter lowpassAudioFilter;
+    private HighpassAudioFilter highPassAudioFilter;
+    private LowpassAudioFilter lowPassAudioFilter;
 
     private void Start()
     {
-        device = VRDevice.Device;
-        leftHand = device.PrimaryInputDevice;
         audioSourceOrigin = FindObjectOfType<AudioSource>().gameObject;
-        highPassFilter = audioSourceOrigin.GetComponent<HighpassAudioFilter>();
-        lowpassAudioFilter = audioSourceOrigin.GetComponent<LowpassAudioFilter>();
+        highPassAudioFilter = audioSourceOrigin.GetComponent<HighpassAudioFilter>();
+        lowPassAudioFilter = audioSourceOrigin.GetComponent<LowpassAudioFilter>();
     }
 
     private void FixedUpdate()
     {
-        if (Input.GetButtonDown(KeyCode.Joystick1Button2.ToString()))
+        if (OVRInput.GetDown(OVRInput.Button.Three))
         {
-            ApplyHighPassFilter();
-            DisableLowPassFilter();
+            highPassAudioFilter.enabled = true;
+            lowPassAudioFilter.enabled = false;
+            //ApplyHighPassFilter();
+            //DisableLowPassFilter();
         }
     }
 
     void ApplyHighPassFilter()
     {
-        if (highPassFilter != null)
+        if (highPassAudioFilter != null)
         {
-            if (highPassFilter.enabled == false)
+            if (highPassAudioFilter.enabled == false)
             {
-                highPassFilter.enabled = true;
+                
             }
         }
     }
 
     void DisableLowPassFilter()
     {
-        if (lowpassAudioFilter != null)
+        if (lowPassAudioFilter != null)
         {
-            if (lowpassAudioFilter.enabled)
+            if (lowPassAudioFilter.enabled)
             {
-                lowpassAudioFilter.enabled = false;
+                
             }
         }
     }

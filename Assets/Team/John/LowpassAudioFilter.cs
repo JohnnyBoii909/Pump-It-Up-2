@@ -6,67 +6,67 @@ using UnityEngine;
 
 public class LowpassAudioFilter : MonoBehaviour
 {
-    private IVRDevice device;
-    private IVRInputDevice rightHand;
     private GameObject audioSourceOrigin;
-    private HighpassAudioFilter highPassFilter;
-    private LowpassAudioFilter lowpassAudioFilter;
+    private HighpassAudioFilter highPassAudioFilter;
+    private LowpassAudioFilter lowPassAudioFilter;
     
     private void Start()
     {
-        device = VRDevice.Device;
-        rightHand = device.SecondaryInputDevice;
         audioSourceOrigin = FindObjectOfType<AudioSource>().gameObject;
-        highPassFilter = audioSourceOrigin.GetComponent<HighpassAudioFilter>();
-        lowpassAudioFilter = audioSourceOrigin.GetComponent<LowpassAudioFilter>();
+        highPassAudioFilter = audioSourceOrigin.GetComponent<HighpassAudioFilter>();
+        lowPassAudioFilter = audioSourceOrigin.GetComponent<LowpassAudioFilter>();
     }
     
     private void FixedUpdate()
     {
-        if (Input.GetButtonDown(KeyCode.Joystick1Button0.ToString()))
+        if (OVRInput.GetDown(OVRInput.Button.One))
         {
-            ApplyLowPassFilter();
-            DisableHighPassFilter();
+            lowPassAudioFilter.enabled = true;
+            highPassAudioFilter.enabled = false;
+            //ApplyLowPassFilter();
+            //DisableHighPassFilter();
         }
 
-        if (Input.GetButtonDown(KeyCode.Joystick1Button1.ToString())) 
+        if (OVRInput.GetDown(OVRInput.Button.Two))
         { 
-            ResetAllFilters();
+            highPassAudioFilter.enabled = false;
+            lowPassAudioFilter.enabled = false;
+            //ResetAllFilters();
         }
     }
     
     void ApplyLowPassFilter()
     {
-        if (lowpassAudioFilter != null)
+        if (lowPassAudioFilter != null)
         {
-            if (lowpassAudioFilter.enabled == false)
+            if (lowPassAudioFilter.enabled == false)
             {
-                lowpassAudioFilter.enabled = true;
+                
             }
         }
     }
 
     void DisableHighPassFilter()
     {
-        if (highPassFilter != null)
+        if (highPassAudioFilter != null)
         {
-            if (highPassFilter.enabled)
+            if (highPassAudioFilter.enabled)
             {
-                highPassFilter.enabled = false;
+                
             }
         }
     }
 
     void ResetAllFilters()
     {
-        if(lowpassAudioFilter.enabled)
+        if(lowPassAudioFilter.enabled)
         {
-            lowpassAudioFilter.enabled = false;
+            
         }
 
-        if (highPassFilter.enabled)
+        if (highPassAudioFilter.enabled)
         {
-            highPassFilter.enabled = false;
+            highPassAudioFilter.enabled = false;
         }
     }
 }
