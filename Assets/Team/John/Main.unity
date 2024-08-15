@@ -356,6 +356,41 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 494705531}
   m_PrefabAsset: {fileID: 0}
+--- !u!164 &404586523
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404586522}
+  m_Enabled: 0
+  m_DryLevel: 0
+  m_Room: -500
+  m_RoomHF: 0
+  m_DecayTime: 1
+  m_DecayHFRatio: 0.5
+  m_ReflectionsLevel: -10000
+  m_ReverbLevel: 0
+  m_ReverbDelay: 0.04
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 27
+--- !u!114 &404586524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404586522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e8a3de7322ee74f8d01d9865ab065f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &404586526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,7 +478,12 @@ PrefabInstance:
     - target: {fileID: 4334638695820670436, guid: e2c56bcfa2359c3408929458807004a8,
         type: 3}
       propertyPath: m_CutoffFrequency
-      value: 10
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334638695820670436, guid: e2c56bcfa2359c3408929458807004a8,
+        type: 3}
+      propertyPath: m_HighpassResonanceQ
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4515062160442182307, guid: e2c56bcfa2359c3408929458807004a8,
         type: 3}
@@ -453,7 +493,12 @@ PrefabInstance:
     - target: {fileID: 4515062160442182307, guid: e2c56bcfa2359c3408929458807004a8,
         type: 3}
       propertyPath: lowpassLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
+      value: 0.09049568
+      objectReference: {fileID: 0}
+    - target: {fileID: 4515062160442182307, guid: e2c56bcfa2359c3408929458807004a8,
+        type: 3}
+      propertyPath: m_LowpassResonanceQ
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6779182817672501680, guid: e2c56bcfa2359c3408929458807004a8,
         type: 3}
@@ -529,8 +574,9 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 3160707881976424d94b3817fe4a3568, type: 3}
-    m_RemovedComponents: []
+      objectReference: {fileID: 8300000, guid: 7c024f725cc8e854c8193edb1b80d397, type: 3}
+    m_RemovedComponents:
+    - {fileID: 4083104464328848398, guid: e2c56bcfa2359c3408929458807004a8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e2c56bcfa2359c3408929458807004a8, type: 3}
 --- !u!82 &494705532 stripped
 AudioSource:
@@ -1827,12 +1873,12 @@ PrefabInstance:
     - target: {fileID: 1260162969423114810, guid: 22276a8657744e04cba8ad0a2caf4195,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.148
       objectReference: {fileID: 0}
     - target: {fileID: 1260162969423114810, guid: 22276a8657744e04cba8ad0a2caf4195,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.616
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1260162969423114810, guid: 22276a8657744e04cba8ad0a2caf4195,
         type: 3}
@@ -2000,12 +2046,12 @@ PrefabInstance:
     - target: {fileID: 6931720710805485780, guid: 04f3798b214a9dc4f9b63d565df011b2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.03
+      value: -0.144
       objectReference: {fileID: 0}
     - target: {fileID: 6931720710805485780, guid: 04f3798b214a9dc4f9b63d565df011b2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.04
+      value: 1.668
       objectReference: {fileID: 0}
     - target: {fileID: 6931720710805485780, guid: 04f3798b214a9dc4f9b63d565df011b2,
         type: 3}
@@ -2240,17 +2286,22 @@ PrefabInstance:
     - target: {fileID: 6931720709943535419, guid: 04f3798b214a9dc4f9b63d565df011b2,
         type: 3}
       propertyPath: m_Text
-      value: 'Press "Right Hand Trigger"
+      value: 'Press "A"
 
         To Enable High Pass Filter
 
 
-        Press "Left Hand Trigger"
+        Press "X"
 
         To Enable Low Pass Filter
 
 
-        Press "Right Hand B Button"
+        Press "Y"
+
+        To enable/disable Reverb Filter
+
+
+        Press "B"
 
         To Disable All Filters'
       objectReference: {fileID: 0}
