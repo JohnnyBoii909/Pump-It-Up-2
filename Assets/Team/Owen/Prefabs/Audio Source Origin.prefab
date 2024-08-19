@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6779182817672501681}
   - component: {fileID: 4515062160442182307}
   - component: {fileID: 4334638695820670436}
-  - component: {fileID: 4083104464328848398}
   m_Layer: 0
   m_Name: Audio Source Origin
   m_TagString: Untagged
@@ -166,17 +165,3 @@ AudioHighPassFilter:
   m_Enabled: 1
   m_CutoffFrequency: 10
   m_HighpassResonanceQ: 1
---- !u!114 &4083104464328848398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6779182817672501682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be5bd7a66de0e1c4cb4287361d312081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _lowPassCutOffFrequency: 600
-  _lerpDuration: 1

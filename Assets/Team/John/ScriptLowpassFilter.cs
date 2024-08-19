@@ -28,11 +28,6 @@ public class ScriptLowpassFilter : MonoBehaviour
             ApplyLowPassFilter();
             DisableHighPassFilter();
         }
-
-        if(OVRInput.GetDown(OVRInput.Button.Two))
-        {
-            ResetAllFilters();
-        }
     }
     
     void ApplyLowPassFilter()
@@ -54,24 +49,6 @@ public class ScriptLowpassFilter : MonoBehaviour
             {
                 _highPassAudioFilter.enabled = false;
             }
-        }
-    }
-
-    void ResetAllFilters()
-    {
-        if(_lowPassAudioFilter.enabled)
-        {
-            _lowPassAudioFilter.enabled = false;
-        }
-
-        if (_highPassAudioFilter.enabled)
-        {
-            _highPassAudioFilter.enabled = false;
-        }
-
-        if (_reverbFilter.enabled)
-        {
-            _reverbFilter.enabled = false;
         }
     }
 }

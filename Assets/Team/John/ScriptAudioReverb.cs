@@ -1,15 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ScriptAudioReverb : MonoBehaviour
 {
-    private AudioReverbFilter _reverbFilter;
-    
-    // Start is called before the first frame update
-    void Start()
+    public AudioReverbFilter reverbFilter;
+
+    private void Start()
     {
-        _reverbFilter = GetComponent<AudioReverbFilter>();
+        if (reverbFilter == null)
+        {
+            Debug.LogError("AudioReverbFilter is not assigned");
+        }
     }
 
     // Update is called once per frame
@@ -17,24 +21,27 @@ public class ScriptAudioReverb : MonoBehaviour
     {
         if (OVRInput.GetDown(OVRInput.Button.Four))
         {
-            EnableReverbFilter();
-            DisableReverbFilter();
+            Debug.Log("OVRInput Button Four pressed");
+            EnableDisableReverbFilter();
+        }
+        
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Debug.Log("S key pressed");
+            EnableDisableReverbFilter();
         }
     }
 
-    void EnableReverbFilter()
+    void EnableDisableReverbFilter()
     {
-        if (_reverbFilter.enabled == false)
+        if (reverbFilter != null)
         {
-            _reverbFilter.enabled = true;
+            reverbFilter.enabled = !reverbFilter.enabled;
+            Debug.Log("Reverb filter enabled: " + reverbFilter.enabled);
         }
-    }
-
-    void DisableReverbFilter()
-    {
-        if (_reverbFilter.enabled == true)
+        else
         {
-            _reverbFilter.enabled = false;
+            Debug.LogError("AudioReverbFilter is null!");
         }
     }
 }
